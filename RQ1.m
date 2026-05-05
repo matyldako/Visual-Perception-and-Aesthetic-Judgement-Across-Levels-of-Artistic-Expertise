@@ -76,7 +76,7 @@ clear; clc; close all;
 % and then i will create separate dataframes if needed 
 
 % data directory on local machine 
-data_dir = '/Users/matyldakornacka/Desktop/DATA_DISS/AllData'; 
+data_dir = '/Users//Desktop/DATA_DISS/AllData'; 
 
 % Define Group Colours for Consistency - orange good bc colourblind ppl can
 % see the difference still
@@ -231,7 +231,7 @@ for i = 1:N
     end
 end
  
-%% --- 1. PSYCHOMETRIC FITTING LOOP ----------------------------
+%%  1. PSYCHOMETRIC FITTING LOOP 
 
 PSE   = nan(N, 1);   % contrast at P = 0.5  (threshold)
 JND   = nan(N, 1);   % contrast increment for 1 slope-unit above PSE
@@ -314,7 +314,7 @@ JND(~good_fit)   = NaN;
 Slope(~good_fit) = NaN;
 
 
-%% --- 2. INDIVIDUAL PSYCHOMETRIC FUNCTIONS (Fig 1) ------------
+%%  2. INDIVIDUAL PSYCHOMETRIC FUNCTIONS (Fig 1)
 
 ncols = 7;
 nrows = ceil(N / ncols);
@@ -360,7 +360,7 @@ end
 
 sgtitle('Figure 1.  Individual Symmetry Detection Functions  (Blue = Artist, Orange = Control)', ...
     'FontWeight','bold','FontSize',13);
-%% --- 2. INDIVIDUAL PSYCHOMETRIC FUNCTIONS (Fig 1) ------------
+%%  2. INDIVIDUAL PSYCHOMETRIC FUNCTIONS (Fig 1) 
 ncols = 5;
 nrows = ceil(sum(good_fit) / ncols);
 figure('Color','w','Position',[30 30 1000 900],'Name','Fig 1 - Individual Fits');
@@ -398,7 +398,7 @@ lg = legend([h_art h_con], {'Art Expert','Control'}, 'Orientation','horizontal',
 lg.Position = [0.35 0.01 0.3 0.03];
 sgtitle(' Individual Symmetry Detection Psychometric Functions', ...
     'FontWeight','bold','FontSize',13);
-%% --- 2. INDIVIDUAL PSYCHOMETRIC FUNCTIONS (Fig 1) ------------
+%%  2. INDIVIDUAL PSYCHOMETRIC FUNCTIONS (Fig 1) 
 ncols = 7;
 nrows = ceil(sum(good_fit) / ncols);
 figure('Color','w','Position',[30 30 1400 850],'Name','Fig 1 - Individual Fits');
@@ -428,7 +428,7 @@ end
 sgtitle('Figure 1.  Individual Symmetry Detection Functions  (Blue = Artist, Orange = Control)', ...
     'FontWeight','bold','FontSize',13);
 
-%% --- 3. GROUP MEAN PSYCHOMETRIC FUNCTION (Fig 2) -------------
+%%  3. GROUP MEAN PSYCHOMETRIC FUNCTION (Fig 2) 
 
 figure('Color','w','Position',[100 100 900 600],'Name','Fig 2 - Group Psychometric');
 ax = axes('Parent', gcf);
@@ -540,7 +540,7 @@ fprintf('\n=== Individual-level Welch t-tests: Artists vs Controls ===\n');
 fprintf('PSE:   t(%.1f) = %.3f, p = %.4g (Art M=%.3f, Ctrl M=%.3f)\n', st_PSE.df,   st_PSE.tstat,   p_PSE,   nanmean(PSE(art_idx)),   nanmean(PSE(con_idx)));
 fprintf('Slope: t(%.1f) = %.3f, p = %.4g (Art M=%.3f, Ctrl M=%.3f)\n', st_Slope.df, st_Slope.tstat, p_Slope, nanmean(Slope(art_idx)), nanmean(Slope(con_idx)));
 fprintf('JND:   t(%.1f) = %.3f, p = %.4g (Art M=%.3f, Ctrl M=%.3f)\n', st_JND.df,   st_JND.tstat,   p_JND,   nanmean(JND(art_idx)),   nanmean(JND(con_idx)));
-%% --- 4. BOXPLOTS: PSE, JND, SLOPE (Fig 3) --------------------
+%%  4. BOXPLOTS: PSE, JND, SLOPE (Fig 3) 
 
 figure('Color','w','Position',[150 150 1100 380],'Name','Fig 3 - PSE JND Slope');
 
