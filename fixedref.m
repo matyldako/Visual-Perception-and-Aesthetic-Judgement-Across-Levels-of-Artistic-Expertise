@@ -18,8 +18,8 @@
 clear; clc; close all;
 
 %% 0. Paths and constants
-DATA_DIR  = '/Users/matyldakornacka/Desktop/DATA_DISS/AllData';
-OUT_DIR   = '/Users/matyldakornacka/Desktop/DATA_DISS/other';
+DATA_DIR  = '/Users//Desktop/DATA_DISS/AllData';
+OUT_DIR   = '/Users//Desktop/DATA_DISS/other';
 if ~exist(OUT_DIR,'dir'), mkdir(OUT_DIR); end
 
 ART_COL  = [0.20, 0.45, 0.75];
