@@ -25,7 +25,7 @@
 clear; clc; close all;
 warning('off','all');
 %%
-addpath(genpath('/Users/matyldakornacka/Desktop/DATA_DISS/modelfree1.1'))
+addpath(genpath('/Users//Desktop/DATA_DISS/modelfree1.1'))
 
 
 %% 0. ModelFree availability check
@@ -39,8 +39,8 @@ if ~MF_AVAILABLE
 end
 
 %% Paths & Definitions
-DATA_DIR       = '/Users/matyldakornacka/Desktop/DATA_DISS/AllData';
-OUT_DIR        = '/Users/matyldakornacka/Desktop/DATA_DISS/RQ2_MF_FixedRef';
+DATA_DIR       = '/Users//Desktop/DATA_DISS/AllData';
+OUT_DIR        = '/Users//Desktop/DATA_DISS/RQ2_MF_FixedRef';
 REF_TYPE_FIXED = 2;   % col 3 of ResFile == 2 -> Refb = object image 7
 % Filtering to REF_TYPE_FIXED==2 throughout places all four categories on a
 % common measuring scale: every test image is compared against object image 7.
